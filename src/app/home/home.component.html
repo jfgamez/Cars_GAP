@@ -1,0 +1,29 @@
+<app-base class="o-flexbox o-flex-dir-col u-w-full">
+  <div class="c-cars-title-home o-flexbox o-flex-dir-col o-flex-wrap o-just-cont-center u-w-content u-margin-0-auto">
+      <h1 class="v-fw-400 v-text-align-center v-color-black u-w-full" [innerHTML]="'home.title' | translate"></h1>
+      <h3 class="u-w-full v-text-align-center v-color-primary-default">Encuentra tu vehículo, está aquí</h3>
+  </div>
+  
+  <div class="c-filter-home o-flexbox o-flex-dir-col o-align-items-center o-flex-wrap o-just-cont-center u-w-content u-margin-0-auto">
+      <div class="c-filter-content">
+          <mat-form-field class="u-w-full u-margin-t-30">
+              <input matInput placeholder="{{ 'home.filter' | translate }}" [(ngModel)]="brandFilter" name="brandFilter">
+              <mat-icon matSuffix>search</mat-icon>
+          </mat-form-field>
+      </div>
+  </div>
+
+  <div class="o-flexbox o-flex-wrap o-just-cont-center u-w-content u-margin-0-auto">
+    <app-detail-card *ngFor="let car of data | filter : brandFilter | async" class="u-margin-r-12 u-margin-l-12 u-margin-b-24 v-cursor-pointer"
+      photo="{{ car.photo }}" 
+      model="{{ car.model }}"
+      year="{{ car.year }}"
+      brand="{{ car.brand }}"
+      cost="{{ car.cost}}">
+    </app-detail-card>
+    <div *ngIf="(data | filter : brandFilter | async)?.length == 0" class="o-flexbox u-margin-auto">
+      <h4 class="v-color-secondary-text">{{ 'common.messages.no_records' | translate }}</h4>
+    </div>
+  </div>
+  
+</app-base>

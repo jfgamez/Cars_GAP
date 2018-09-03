@@ -1,0 +1,17 @@
+@import "./variables.scss";
+
+html {
+  @include flexbox();
+  @extend .u-h-full;
+  @extend .u-w-full;
+  font-family: $font-stack !important;
+}
+
+html body {
+  @include flexbox();
+  @include flexdirection(column);
+  @extend .u-h-full;
+  @extend .u-w-full;
+  @extend .u-margin-0;
+  font-family: $font-stack !important;
+}

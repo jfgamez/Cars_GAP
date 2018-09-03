@@ -1,0 +1,212 @@
+@import "../stylesheets/cars-web-theme.scss";
+
+.v-ff-console {
+  font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
+}
+
+.v-fs-2 {
+  font-size: 2px !important;
+}
+
+.v-fs-3 {
+  font-size: 3px !important;
+}
+
+.v-fs-10 {
+  font-size: 10px;
+}
+
+.v-fs-11 {
+  font-size: 11px !important;
+}
+
+.v-fs-12 {
+  font-size: 12px;
+}
+
+.v-fs-13 {
+  font-size: 13px;
+}
+
+.v-fs-14 {
+  font-size: 14px;
+}
+
+.v-fs-16 {
+  font-size: 16px;
+}
+
+.v-fs-18 {
+  font-size: 18px;
+}
+
+.v-fs-20 {
+  font-size: 20px;
+}
+
+.v-fs-22 {
+  font-size: 22px;
+}
+
+.v-fs-24 {
+  font-size: 24px;
+}
+
+.v-fs-26 {
+  font-size: 26px;
+}
+
+.v-fs-30 {
+  font-size: 30px;
+}
+
+.v-fs-40 {
+  font-size: 40px;
+}
+
+.v-fw-bold {
+  font-weight: bold;
+}
+
+.v-fs-100 {
+  font-size: 100px;
+}
+
+.v-fw-200 {
+  font-weight: 300;
+}
+
+.v-fw-300 {
+  font-weight: 300;
+}
+
+.v-fw-400 {
+  font-weight: 400;
+}
+
+.v-fw-500 {
+  font-weight: 500;
+}
+
+.v-fst-italic {
+  font-style: italic;
+}
+
+.v-line-h-20 {
+  line-height: 20px;
+}
+
+.v-color-secondary-text {
+  color: $secondary-text-color !important;
+}
+
+.v-color-grey {
+  color: grey;
+}
+
+.v-color-white {
+  color: white;
+}
+
+.v-color-green {
+  color: green;
+}
+
+.v-color-black {
+  color: black;
+}
+
+.v-color-contrast-900 {
+  color: $primary-contrast-900 !important;
+}
+
+.v-color-primary-default {
+  color: $primary-default;
+}
+
+.v-color-primary-500 {
+  color: $primary-500;
+}
+
+.v-color-warn-default {
+  color: $warn-default;
+}
+
+.v-background-background {
+  background: $background-background;
+}
+.v-background-card {
+  background: $background-card;
+}
+
+.v-backg-color-app-bar {
+  background-color: $background-title-tables;
+}
+
+.v-backg-color-prim-default {
+  background-color: $primary-default;
+}
+
+.v-backg-color-prim-200 {
+  background-color: $primary-200;
+}
+
+.v-backg-color-prim-300 {
+  background-color: $primary-300;
+}
+
+.v-backg-color-prim-400 {
+  background-color: $primary-400;
+}
+
+.v-backg-color-prim-500 {
+  background-color: $primary-400;
+}
+
+.v-backg-color-prim-600 {
+  background-color: $primary-400;
+}
+
+.v-backg-color-prim-A200 {
+  background-color: $primary-A200;
+}
+
+.v-backg-color-prim-A400 {
+  background-color: $primary-A400;
+}
+
+.v-backg-color-prim-A700 {
+  background-color: $primary-A700;
+}
+
+.v-backg-color-raised-button {
+  background-color: $background-raised-button !important;
+}
+
+.v-cursor-wait {
+  cursor: wait !important;
+}
+
+.v-cursor-not-allow {
+  cursor: not-allowed !important;
+}
+
+.v-cursor-default {
+  cursor: default !important;
+}
+
+.v-cursor-pointer {
+  cursor: pointer;
+}
+
+.v-text-align-center {
+  text-align: center;
+}
+
+.v-text-align-right {
+  text-align: right;
+}
+
+body .v-hover-elevation-z10:hover {
+    @extend .mat-elevation-z10;
+}

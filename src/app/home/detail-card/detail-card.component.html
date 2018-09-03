@@ -1,0 +1,17 @@
+<mat-card class="c-detail-card v-hover-elevation-z10" [routerLink]="[path]">
+  <mat-card-content class="u-padding-24">
+    <div class="c-detail-card__image v-fs-20 v-fw-500 u-margin-b-8">
+      <img src="{{photo}}" alt={{model}}>
+    </div>
+    <div class="c-detail-card__content">
+        <div class="v-fs-20 v-color-secondary-text v-line-h-20 v-text-align-center">
+            $ {{ cost | number:'.2-2' }}
+        </div>
+        <div class="v-fs-13 v-color-secondary-text v-line-h-20 v-text-align-center">
+          {{ model }} <span class="v-fw-bold">{{ year }}</span>
+        </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+

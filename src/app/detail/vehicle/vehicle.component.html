@@ -1,0 +1,33 @@
+<app-base class="o-flexbox o-flex-dir-col u-w-full">
+    <div class="o-flexbox o-flex-dir-row o-flex-wrap u-w-content u-margin-0-auto">
+
+      <div class="c-detail-vehicle-image">
+        <img src="{{ info_car?.photo }}" alt="">
+      </div>
+
+      <div class="c-detail-vehicle-pro">
+          <h1 class="v-color-primary-default">{{ info_car?.model }}</h1>
+          <h3>$ {{ info_car?.cost | number:'.2-2' }}</h3>          
+      </div>       
+
+    </div>
+    <div class="o-flexbox o-flex-dir-col o-flex-wrap u-w-content u-margin-0-auto">
+      <div class="c-detail-vehicle-desc">
+        <div class="o-flexbox o-flex-wrap o-just-cont-space-between">
+            <div>
+                <h5 class="v-color-grey">Color</h5>  {{ info_car?.color }}  
+            </div>
+            <div>
+              <h5 class="v-color-grey">Marca</h5>  {{ info_car?.brand }}  
+            </div>
+            <div>
+              <h5 class="v-color-grey">Año</h5>  {{ info_car?.year }}            
+            </div>
+            <div>
+              <h5 class="v-color-grey">Categoría</h5>  {{ info_car?.category }}  
+            </div>
+        </div>
+          <h4>Descripción</h4> {{ info_car?.desc }}
+      </div>
+    </div>
+</app-base>

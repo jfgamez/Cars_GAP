@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*Importing theme from angular-material*/
+
+// @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";  
+@import "app/stylesheets/mixins.scss";
+@import "app/stylesheets/components/_c-loader.scss";
+
+// Reset default style
+@import "app/stylesheets/components/_normalize.scss";
+
+// Style for Toasty
+@import "app/stylesheets/components/style-material.scss";
+
+// Categories of styles
+@import "app/stylesheets/misc-settings.scss";
+@import "app/stylesheets/misc-elements.scss";
+@import "app/stylesheets/misc-components.scss";
+@import "app/stylesheets/misc-objects.scss";
+@import "app/stylesheets/misc-utilities.scss";
+@import "app/stylesheets/misc-visuals.scss";
+

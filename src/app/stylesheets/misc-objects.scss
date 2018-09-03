@@ -1,0 +1,168 @@
+@import './variables.scss';
+
+.o-box-s-border-box {
+  box-sizing: border-box
+}
+
+.o-display-none {
+  display: none;
+}
+
+.o-flexbox {
+  @include flexbox();
+}
+
+.o-flex-dir-row {
+  @include flexdirection(row);
+}
+
+.o-flex-dir-row-rev {
+  @include flexdirection(row-reverse);
+}
+
+.o-flex-dir-col {
+  @include flexdirection(column);
+}
+
+.o-flex-dir-col-rev {
+  @include flexdirection(column-reverse);
+}
+
+.o-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.o-flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.o-flex-0 {
+  @include flex(0);
+}
+
+.o-flex-1 {
+  @include flex(1);
+}
+
+.o-flex-2 {
+  @include flex(2);
+}
+
+.o-flex-3 {
+  @include flex(3);
+}
+
+.o-flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+.o-align-items-center {
+  align-items: center;
+}
+
+.o-align-items-flex-end {
+  align-items: flex-end !important;
+}
+
+.o-just-cont-flex-start {
+  justify-content: flex-start;
+}
+
+.o-just-cont-flex-end {
+  justify-content: flex-end;
+}
+
+.o-just-cont-center {
+  justify-content: center;
+}
+
+.o-just-cont-space-around {
+  justify-content: space-around;
+}
+
+.o-just-cont-space-between {
+  justify-content: space-between;
+}
+
+.o-spacer {
+  @include flex(1 1 auto);
+}
+
+@media screen and (max-width: $medium-bp) {
+  .o-mb-fl-contentWidth {
+    max-width: $medium-bp+280;
+  }
+
+  .o-mb-fl-order1 {
+    order: 1;
+  }
+
+  .o-mb-fl-order2 {
+    order: 2;
+  }
+
+  .o-mb-fl-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .o-mb-fl-col {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .o-mb-fl-fill {
+    flex: 1 1 auto;
+  }
+
+  .o-mb-fl-alignCenter {
+    align-items: center;
+  }
+
+  .o-mb-fl-alignStart {
+    align-items: flex-start;
+  }
+
+  .o-mb-fl-alignStretch {
+    align-items: stretch;
+  }
+
+  .o-mb-fl-justifyCenter {
+    justify-content: center;
+  }
+
+  .o-mb-fl-spaceBetween {
+    justify-content: space-between;
+  }
+
+  .o-mb-fl-spaceAround {
+    justify-content: space-around;
+  }
+
+  .o-mb-fl-justifyStart {
+    justify-content: flex-start;
+  }
+
+  .o-mb-fl-default {
+    flex: 0 1 auto;  
+  }
+  
+  .o-mb-fl-none {
+    flex: none;
+  }
+
+  .o-mb-fl-contentStart {
+    align-content: flex-start;
+  }
+
+  .o-mb-fl-noWrap {
+    flex-wrap: nowrap;
+  }
+
+  .o-mb-fl-noContentWidth {
+    max-width: none;
+  }
+}

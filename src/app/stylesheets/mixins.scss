@@ -1,0 +1,62 @@
+/*
+ * CSS ANIMATIONS
+ */
+ @mixin transition($values...){
+   transition: $values;
+   -moz-transition: $values;
+   -o-transition: $values;
+   -webkit-transition: $values;
+ }
+
+ @mixin transform($values){
+   transform: $values;
+   -moz-transform: $values;
+   -ms-transform: $values;
+   -o-transform: $values;
+   -webkit-transform: $values;
+ }
+
+/*
+ * FLEXBOX
+ */
+
+ @mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin order($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}
+
+@mixin flexdirection($dir){
+    -webkit-flex-direction: $dir;
+    flex-direction: $dir;
+}
+
+/* OPERATIONS */
+@mixin calc-heigth($expression){
+    /* Firefox */
+  height: -moz-calc(#{$expression});
+    /* WebKit */
+  height: -webkit-calc(#{$expression});
+  /* Opera */
+  height: -o-calc(#{$expression});
+  /* Standard */
+  height: calc(#{$expression});
+}

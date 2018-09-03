@@ -1,0 +1,226 @@
+@import "./mixins.scss";
+@import "../stylesheets/cars-web-theme.scss";
+.c-underline-b-1 {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.c-underline-b-5-azure-r {
+  border-bottom: 5px solid rgb(0, 128, 232);
+}
+
+.c-leftline-b-1 {
+  border-left: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.c-underline-1 {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+
+/* For edit dialog in products module */
+
+.panelDialogAccordion .mat-dialog-container {
+  padding: 0px;
+}
+
+
+/* For edit dialog in users and distribuitors module */
+
+.panelEditDialog .mat-dialog-container {
+  padding: 0px;
+}
+
+.c-form-create {
+  @include flexbox();
+  @include flexdirection(column);
+  min-width: 450px; //   max-width: 500px;
+  width: 100%;
+  margin: auto;
+}
+
+.c-form-row-flex {
+  @include flexbox();
+  @include flexdirection(row);
+}
+
+.c-form-cell {
+  @include flexbox();
+  @include flexdirection(row);
+  @include flex(1);
+  @extend .v-fs-13;
+}
+
+.c-button-add {
+  margin-left: 24px !important;
+  margin-right: 4px !important;
+}
+
+.c-actions-menu mat-icon {
+  margin-right: 8px !important;
+}
+
+.c-refresh-button {
+  margin-left: 4px;
+  margin-right: 6px;
+}
+
+.c-refresh-button mat-icon {
+  color: $secondary-text-color;
+}
+
+.c-icon-search {
+  margin-left: 8px;
+  margin-right: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: $secondary-text-color;
+}
+
+.mat-form-field {
+  font-size: 13px !important;
+  flex-grow: 1;
+}
+
+.mat-table {
+  // overflow: auto;
+}
+
+.mat-cell.mat-column-actions {
+  @include flexbox();
+  @include flexdirection(row-reverse);
+}
+
+.mat-row:hover {
+  .u-hidden {
+    visibility: visible !important;
+  }
+}
+
+.c-form-cell-sep {
+  width: 20px;
+}
+
+.c-form-cell-buttons {
+  @include flexbox();
+  @include flexdirection(row-reverse);
+  @include flex(1);
+}
+
+.c-form-margin-elevation {
+  margin: 0px -16px;
+  @extend .mat-elevation-z4;
+}
+
+.c-table-header {
+  @include flexbox();
+  min-height: 64px;
+  height: 56px;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: $background-title-tables;
+  font-size: 20px;
+}
+
+mat-form-field {
+  padding-bottom: 10px !important;
+}
+
+mat-header-row {
+  background-color: $background-title-tables;
+  mat-header-cell {
+    color: $secondary-text-color;
+    font-weight: bold;
+    font-size: 13px !important;
+  }
+}
+
+mat-row mat-cell {
+  font-size: 13px !important;
+}
+
+.c-chip-list-nowrap {
+  .mat-chip-list-wrapper {
+    flex-wrap: nowrap;
+  }
+}
+
+.c-expansion-panel-primary {
+  .mat-expansion-panel-header,
+  .mat-expansion-panel-header:hover,
+  .mat-expansion-panel-header:visited {
+    background-color: $primary-default !important;
+    * {
+      color: $primary-contrast-900 !important;
+    }
+    .mat-expansion-indicator::after {
+      color: $primary-contrast-900 !important;
+    }
+  }
+}
+
+.c-toolbar-base {
+  min-height: 56px !important;
+}
+
+.c-chip-primary-500 {
+  background-color: $primary-500 !important; // This styles were taken from material angular theming file (scss)
+  // background-color: $background;
+  // color: $foreground;
+  // .mat-chip-remove {
+  //   color: $foreground;
+  //   opacity: 0.4;
+  // }
+  // .mat-chip-remove:hover {
+  //   opacity: 0.54;
+  // }
+}
+
+.c-horizontal-stepper-primary {
+  .mat-horizontal-stepper-header-container {
+    background-color: $primary-default;
+    .mat-step-icon {
+      background-color: $primary-500 !important;
+    } // .cdk-focused {
+    //   background-color: cyan;
+    // }
+    .mat-stepper-horizontal-line {
+      background-color: $primary-contrast-default;
+    }
+    .mat-step-label,
+    .mat-step-optional {
+      color: rgba($primary-contrast-default, 0.3) !important; // font-weight: 100;
+    }
+    .mat-step-label.mat-step-label-active {
+      color: $primary-contrast-default !important; // font-weight: 300;
+    } // * {
+    // color: $primary-contrast-default !important;
+    // }
+  } // .mat-horizontal-content-container {
+  // min-height: 200px;
+  // }
+}
+
+.c-chip-list-primary-500 {
+  .mat-chip {
+    background-color: $primary-500 !important;
+    font-size: 12px !important;
+    padding: 5px 8px !important;
+  }
+}
+
+.c-pre {
+  display: block;
+  font-family: monospace;
+  white-space: pre;
+  margin: 1em 0;
+}
+
+
+/**
+ * For block-ui component in Roles Module
+*/
+
+.c-blank-block .block-ui-wrapper {
+  background: rgba(0, 0, 0, 0) !important;
+}
