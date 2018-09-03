@@ -19,7 +19,8 @@
       model="{{ car.model }}"
       year="{{ car.year }}"
       brand="{{ car.brand }}"
-      cost="{{ car.cost}}">
+      cost="{{ car.cost}}"
+      path="/detail/vehicle/{{ car.id }}">
     </app-detail-card>
     <div *ngIf="(data | filter : brandFilter | async)?.length == 0" class="o-flexbox u-margin-auto">
       <h4 class="v-color-secondary-text">{{ 'common.messages.no_records' | translate }}</h4>

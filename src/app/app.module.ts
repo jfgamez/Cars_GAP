@@ -8,7 +8,6 @@ import { ShellComponent } from './layouts/shell/shell.component';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { VehicleComponent } from './vehicle/vehicle.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -30,7 +29,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   ],
   providers: [],
   bootstrap: [AppComponent],
-  declarations: [VehicleComponent]
+  declarations: []
 })
 
 export class AppModule { }

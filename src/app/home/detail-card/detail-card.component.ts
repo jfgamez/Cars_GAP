@@ -11,6 +11,7 @@ export class DetailCardComponent {
   @Input() year: string;
   @Input() brand: string;
   @Input() cost: string;
+  @Input() path: string;
 
   constructor() { }
 
