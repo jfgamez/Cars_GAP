@@ -1,0 +1,15 @@
+.nav-bar {
+    a {
+        color: grey;
+        text-decoration: none;
+    }
+    a:hover {
+        color: #01579b;
+    }
+    
+    a:active, 
+    a:focus,
+    a:visited, {
+        color: #01579b;
+    }
+}

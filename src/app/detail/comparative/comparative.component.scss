@@ -1,0 +1,11 @@
+$height_card: 200px;
+$width_card: 200px;
+
+.c-detail-card__content {
+    width: 100%;
+}
+.c-detail-card__image {
+    img {
+        width: $width_card;
+    }
+}

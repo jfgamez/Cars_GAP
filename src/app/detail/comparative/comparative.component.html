@@ -1,0 +1,46 @@
+<app-base class="o-flexbox o-flex-dir-col u-w-full">
+
+  <div class="c-cars-title-home o-flexbox o-flex-dir-col o-flex-wrap o-just-cont-center o-align-items-center u-w-content u-margin-0-auto">
+      <h1 class="v-fw-400 v-text-align-center v-color-black u-w-full" [innerHTML]="'home.title' | translate"></h1>
+      <h3 class="u-w-full v-text-align-center v-color-primary-default">Aquí puedes comparar tu vehiículo ideal, selecciona máximo tres vehículos</h3>
+      <p class="u-w-full v-text-align-center v-color-primary-default">
+        <button style="width: 150px" mat-raised-button color="primary" class="c-button-add" (click)="toggleComparative()" [disabled]="btnComparative">
+          <span class="v-fs-12 u-truncate">
+            Comparar ahora!
+          </span>
+        </button>
+      </p>
+  </div>
+
+  <div class="o-flexbox o-flex-wrap o-just-cont-center u-w-content u-margin-0-auto">
+    <div *ngFor="let car of _data | async" class="u-margin-r-12 u-margin-l-12 u-margin-b-24 v-cursor-pointer">
+      <mat-card class="c-detail-card v-hover-elevation-z10">
+        <mat-card-content class="u-padding-24">
+          <div class="c-detail-card__image v-fs-20 v-fw-500 u-margin-b-8">
+            <img src="{{car.photo}}" alt={{model}}>
+          </div>
+          <div class="c-detail-card__content">
+              <div class="v-fs-20 v-color-secondary-text v-line-h-20 v-text-align-center">
+                  $ {{ car.cost | number:'.2-2' }}
+              </div>
+              <div class="v-fs-13 v-color-secondary-text v-line-h-20 v-text-align-center">
+                {{ car.model }} <span class="v-fw-bold">{{ car.year }}</span>
+              </div>
+              <div class="v-fs-13 v-color-secondary-text v-line-h-20 v-text-align-center">
+                  <mat-slide-toggle 
+                    color="primary" 
+                    labelPosition="after" 
+                    (change)="changeComparative($event, car.id, car)" 
+                    [checked]="car.active">Comparar</mat-slide-toggle>
+              </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+
+    </div>
+    <div *ngIf="(_data | async)?.length == 0" class="o-flexbox u-margin-auto">
+      <h4 class="v-color-secondary-text">{{ 'common.messages.no_records' | translate }}</h4>
+    </div>
+  </div>
+  
+</app-base>

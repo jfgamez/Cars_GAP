@@ -1,7 +1,12 @@
-
+$medium-bp: 1124px;
 .c-detail-vehicle-image {
     width: 550px;
     margin: 16px;
+    @media screen and (max-width: $medium-bp) {
+        img {
+            height: 250px;
+        }
+    }
 }
 .c-detail-vehicle-pro {
     // width: 300px;
