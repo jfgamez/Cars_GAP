@@ -13,7 +13,7 @@
   </div>
 
   <div class="o-flexbox o-flex-wrap o-just-cont-center u-w-content u-margin-0-auto">
-    <div *ngFor="let car of _data | async" class="u-margin-r-12 u-margin-l-12 u-margin-b-24 v-cursor-pointer">
+    <div *ngFor="let car of _data | async | sort:'brand'" class="u-margin-r-12 u-margin-l-12 u-margin-b-24 v-cursor-pointer">
       <mat-card class="c-detail-card v-hover-elevation-z10">
         <mat-card-content class="u-padding-24">
           <div class="c-detail-card__image v-fs-20 v-fw-500 u-margin-b-8">
@@ -36,11 +36,9 @@
           </div>
         </mat-card-content>
       </mat-card>
-
     </div>
     <div *ngIf="(_data | async)?.length == 0" class="o-flexbox u-margin-auto">
       <h4 class="v-color-secondary-text">{{ 'common.messages.no_records' | translate }}</h4>
     </div>
   </div>
-  
 </app-base>

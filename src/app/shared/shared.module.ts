@@ -5,6 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { BaseComponent } from './base/base.component';
 import { KeysPipe } from './keys.pipe';
 import { FilterPipe } from './filter.pipe';
+import { SortPipe } from './sort.pipe';
 
 @NgModule({
   imports: [
@@ -14,13 +15,15 @@ import { FilterPipe } from './filter.pipe';
   declarations: [
     BaseComponent,
     KeysPipe,
-    FilterPipe
+    FilterPipe,
+    SortPipe
   ],
   exports: [
     TranslateModule,
     BaseComponent,
     KeysPipe,
-    FilterPipe
+    FilterPipe,
+    SortPipe
   ]
 })
 export class SharedModule { }

@@ -14,7 +14,7 @@
   </div>
 
   <div class="o-flexbox o-flex-wrap o-just-cont-center u-w-content u-margin-0-auto">
-    <app-detail-card *ngFor="let car of data | filter : brandFilter | async" class="u-margin-r-12 u-margin-l-12 u-margin-b-24 v-cursor-pointer"
+    <app-detail-card *ngFor="let car of data | filter : brandFilter | async | sort:'brand'" class="u-margin-r-12 u-margin-l-12 u-margin-b-24 v-cursor-pointer"
       photo="{{ car.photo }}" 
       model="{{ car.model }}"
       year="{{ car.year }}"

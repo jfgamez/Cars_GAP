@@ -9,6 +9,7 @@ import { MatSlideToggleChange } from '@angular/material';
 })
 export class ComparativeComponent implements OnInit {
   _data: any;
+  _dataComparative: any;
   ArrayIdComparative: Array<any> = [];
   btnComparative: Boolean = true;
   
@@ -44,6 +45,7 @@ export class ComparativeComponent implements OnInit {
       this.btnComparative = true;
     }
   }
+
   /**
    * On action comparative
    */
